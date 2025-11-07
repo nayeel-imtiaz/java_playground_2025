@@ -1,42 +1,45 @@
 package com.nayeel.imtiaz.patterns.strategy;
 
+import java.util.Objects;
+
 interface PaymentStrategy {
-    public int pay(double amount);
+    void pay(long cents);
 }
 
-class Card implements PaymentStrategy {
-    public int pay(double amount) {
+final class Card implements PaymentStrategy {
+    @Override public void pay(long cents) {
         System.out.println("Card");
-        System.out.println(amount);
-        return 0;
+        System.out.println(cents);
     }
 }
 
-class ApplePay implements PaymentStrategy {
-    public int pay(double amount) {
+final class ApplePay implements PaymentStrategy {
+    @Override public void pay(long cents) {
         System.out.println("Apple");
-        System.out.println(amount);
-        return 1;
+        System.out.println(cents);
     }
 }
 
-class Paypal implements PaymentStrategy {
-    public int pay(double amount) {
+final class PayPal implements PaymentStrategy {
+    @Override public void pay(long cents) {
         System.out.println("Paypal");
-        System.out.println(amount);
-        return 2;
+        System.out.println(cents);
     }
 }
 
-class Checkout {
-    final private PaymentStrategy payment;
+final class Checkout {
+    private PaymentStrategy payment;
 
     public Checkout(PaymentStrategy payment) {
-        this.payment = payment;
+        this.payment = Objects.requireNonNull(payment);
     }
 
-    public void pay(double amount) {
-        this.payment.pay(amount);
+    public void setPaymentStrategy(PaymentStrategy payment) {
+        this.payment = Objects.requireNonNull(payment);
+    }
+
+    public void pay(long cents) {
+        this.payment.pay(cents);
     }
 }
 
@@ -45,10 +48,12 @@ public class PaymentSystem_11_4_25 {
         Checkout checkout = new Checkout(new Card());
         checkout.pay(5);
 
-        Checkout checkout2 = new Checkout(new ApplePay());
-        checkout2.pay(30);
+        checkout.setPaymentStrategy(new ApplePay());
+        checkout.pay(10);
 
-        Checkout checkout3 = new Checkout(new Paypal());
-        checkout3.pay(50);
+        checkout.setPaymentStrategy(new PayPal());
+        checkout.pay(15);
+
+        // checkout.setPaymentStrategy(null); // Throws null pointer exception
     }
 }
