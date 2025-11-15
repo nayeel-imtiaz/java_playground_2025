@@ -1,6 +1,6 @@
 package com.nayeel.imtiaz.patterns.decorator.matcha;
 
-final public class CeremonialMatcha implements Beverage {
+public final class CeremonialMatcha implements Beverage {
     @Override
     public String getDescription() {
         return "Ceremonial Matcha";

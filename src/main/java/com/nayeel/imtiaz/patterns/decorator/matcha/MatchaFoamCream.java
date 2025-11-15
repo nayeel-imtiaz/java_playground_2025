@@ -1,8 +1,8 @@
 package com.nayeel.imtiaz.patterns.decorator.matcha;
 
-final public class MatchaFoamCream extends CondimentDecorator{
+public final class MatchaFoamCream extends CondimentDecorator{
     public MatchaFoamCream(Beverage beverage) {
-        this.beverage = beverage;
+        super(beverage);
     }
 
     @Override
