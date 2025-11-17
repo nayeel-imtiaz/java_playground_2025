@@ -19,4 +19,12 @@ public class MatchaFactory {
             case OAT_MILK -> new OatMilk(base);
         };
     }
+
+    public static Beverage build(BaseDrinkType base, CondimentType... condiments) {
+        Beverage beverage = baseDrink(base);
+        for (CondimentType c : condiments) {
+            beverage = addCondiment(beverage, c);
+        }
+        return beverage;
+    }
 }
