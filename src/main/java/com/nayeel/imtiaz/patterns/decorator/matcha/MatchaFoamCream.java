@@ -1,7 +1,7 @@
 package com.nayeel.imtiaz.patterns.decorator.matcha;
 
 public final class MatchaFoamCream extends CondimentDecorator{
-    public MatchaFoamCream(Beverage beverage) {
+    MatchaFoamCream(Beverage beverage) {
         super(beverage);
     }
 

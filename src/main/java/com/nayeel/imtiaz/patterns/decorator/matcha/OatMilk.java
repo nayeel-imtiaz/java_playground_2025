@@ -1,7 +1,7 @@
 package com.nayeel.imtiaz.patterns.decorator.matcha;
 
 public final class OatMilk extends CondimentDecorator {
-    public OatMilk(Beverage beverage) {
+    OatMilk(Beverage beverage) {
         super(beverage);
     }
 

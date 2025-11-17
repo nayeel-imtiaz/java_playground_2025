@@ -1,6 +1,8 @@
 package com.nayeel.imtiaz.patterns.decorator.matcha;
 
 public final class GenmaichaLatte implements Beverage{
+    GenmaichaLatte() {}
+
     @Override
     public String getDescription() {
         return "Genmaicha Latte";

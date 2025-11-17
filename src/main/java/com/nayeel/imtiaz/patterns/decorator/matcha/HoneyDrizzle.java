@@ -1,7 +1,7 @@
 package com.nayeel.imtiaz.patterns.decorator.matcha;
 
 public final class HoneyDrizzle extends CondimentDecorator {
-    public HoneyDrizzle(Beverage beverage) {
+    HoneyDrizzle(Beverage beverage) {
         super(beverage);
     }
 
