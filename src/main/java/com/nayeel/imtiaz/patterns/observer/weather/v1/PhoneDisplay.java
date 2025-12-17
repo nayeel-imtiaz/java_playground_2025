@@ -1,4 +1,4 @@
-package com.nayeel.imtiaz.patterns.observer.weather;
+package com.nayeel.imtiaz.patterns.observer.weather.v1;
 
 final class PhoneDisplay implements WeatherObserver {
     // wanted to make update() package private

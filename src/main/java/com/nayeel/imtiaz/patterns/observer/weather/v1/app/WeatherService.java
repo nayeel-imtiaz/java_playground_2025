@@ -1,9 +1,9 @@
-package com.nayeel.imtiaz.patterns.observer.weather.app;
+package com.nayeel.imtiaz.patterns.observer.weather.v1.app;
 
-import com.nayeel.imtiaz.patterns.observer.weather.Observers;
-import com.nayeel.imtiaz.patterns.observer.weather.WeatherData;
-import com.nayeel.imtiaz.patterns.observer.weather.WeatherObserver;
-import com.nayeel.imtiaz.patterns.observer.weather.WeatherStation;
+import com.nayeel.imtiaz.patterns.observer.weather.v1.Observers;
+import com.nayeel.imtiaz.patterns.observer.weather.v1.WeatherData;
+import com.nayeel.imtiaz.patterns.observer.weather.v1.WeatherObserver;
+import com.nayeel.imtiaz.patterns.observer.weather.v1.WeatherStation;
 
 public class WeatherService {
     public static void main(String[] args) {

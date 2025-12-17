@@ -1,4 +1,4 @@
-package com.nayeel.imtiaz.patterns.observer.weather;
+package com.nayeel.imtiaz.patterns.observer.weather.v1;
 
 final class WebDashboard implements WeatherObserver {
     @Override
