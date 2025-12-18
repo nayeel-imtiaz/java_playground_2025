@@ -11,7 +11,7 @@ public class WeatherStation implements Subject{
     public void publish(WeatherData data) {
         System.out.println("********************* WEATHER REPORT:\n");
         for (WeatherObserver weatherObserver: weatherObservers) {
-            weatherObserver.display(weatherData);
+            weatherObserver.display(data);
         }
         System.out.println("*********************\n");
     }
@@ -29,6 +29,15 @@ public class WeatherStation implements Subject{
     public void readWeatherData(WeatherData data) {
         weatherData = data;
         this.publish(weatherData);
+    }
+
+    public String getWeatherData() {
+        return String.format(
+            "<<<WeatherData>>>: Temperature: %.1f, Humidity: %.1f, Pressure: %.1f\n\n",
+            weatherData.temperature(),
+            weatherData.humidity(),
+            weatherData.pressure()
+        );
     }
 
 }

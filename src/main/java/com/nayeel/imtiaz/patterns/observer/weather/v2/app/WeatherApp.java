@@ -9,19 +9,20 @@ import com.nayeel.imtiaz.patterns.observer.weather.v2.WebDashboard;
 
 public class WeatherApp {
     public static void main(String[] args) {
-        Subject ABCWeatherStation = new WeatherStation();
-        WeatherStation ABCThermometer = (WeatherStation) ABCWeatherStation;
-
+        WeatherStation ABCThermometer = new WeatherStation();
+        Subject ABCWeatherStation = ABCThermometer;
 
         WeatherObserver ABCPhone = new PhoneDisplay();
         WeatherObserver ABCWebDashboard = new WebDashboard();
         ABCWeatherStation.subscribe(ABCPhone);
         ABCWeatherStation.subscribe(ABCWebDashboard);
 
-        ABCThermometer.readWeatherData(new WeatherData(77.7f, 10, 55));
-        ABCThermometer.readWeatherData(new WeatherData(87.8f, 10, 59));
+        ABCThermometer.readWeatherData(new WeatherData(77.7, 10, 55));
+        ABCThermometer.readWeatherData(new WeatherData(87.8, 10, 59));
 
         ABCWeatherStation.unsubscribe(ABCWebDashboard);
-        ABCThermometer.readWeatherData(new WeatherData(82.4f, 11, 60));
+        ABCThermometer.readWeatherData(new WeatherData(82.4, 11, 60));
+
+        System.out.println(ABCThermometer.getWeatherData());
     }
 }
