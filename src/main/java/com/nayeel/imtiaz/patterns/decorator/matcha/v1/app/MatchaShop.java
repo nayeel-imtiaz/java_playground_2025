@@ -1,9 +1,9 @@
-package com.nayeel.imtiaz.patterns.decorator.matcha.app;
+package com.nayeel.imtiaz.patterns.decorator.matcha.v1.app;
 
-import com.nayeel.imtiaz.patterns.decorator.matcha.Beverage;
-import com.nayeel.imtiaz.patterns.decorator.matcha.BaseDrinkType;
-import com.nayeel.imtiaz.patterns.decorator.matcha.CondimentType;
-import com.nayeel.imtiaz.patterns.decorator.matcha.MatchaFactory;
+import com.nayeel.imtiaz.patterns.decorator.matcha.v1.Beverage;
+import com.nayeel.imtiaz.patterns.decorator.matcha.v1.BaseDrinkType;
+import com.nayeel.imtiaz.patterns.decorator.matcha.v1.CondimentType;
+import com.nayeel.imtiaz.patterns.decorator.matcha.v1.MatchaFactory;
 
 public class MatchaShop {
     public static void main(String[] args) {

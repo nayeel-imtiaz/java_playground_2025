@@ -1,6 +1,6 @@
-package com.nayeel.imtiaz.patterns.decorator.matcha;
+package com.nayeel.imtiaz.patterns.decorator.matcha.v2;
 
-public abstract class CondimentDecorator implements Beverage {
+public abstract class CondimentDecorator implements Beverage{
     protected final Beverage beverage;
 
     protected CondimentDecorator(Beverage beverage) {

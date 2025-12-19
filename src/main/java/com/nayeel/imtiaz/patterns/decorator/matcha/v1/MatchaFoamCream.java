@@ -1,4 +1,4 @@
-package com.nayeel.imtiaz.patterns.decorator.matcha;
+package com.nayeel.imtiaz.patterns.decorator.matcha.v1;
 
 public final class MatchaFoamCream extends CondimentDecorator{
     MatchaFoamCream(Beverage beverage) {

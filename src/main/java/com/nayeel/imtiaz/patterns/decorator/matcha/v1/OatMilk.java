@@ -1,4 +1,4 @@
-package com.nayeel.imtiaz.patterns.decorator.matcha;
+package com.nayeel.imtiaz.patterns.decorator.matcha.v1;
 
 public final class OatMilk extends CondimentDecorator {
     OatMilk(Beverage beverage) {
