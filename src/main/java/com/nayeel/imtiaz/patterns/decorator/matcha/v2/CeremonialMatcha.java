@@ -1,6 +1,6 @@
 package com.nayeel.imtiaz.patterns.decorator.matcha.v2;
 
-public class CeremonialMatcha implements Beverage{
+public final class CeremonialMatcha implements Beverage{
     CeremonialMatcha() {}
 
     @Override

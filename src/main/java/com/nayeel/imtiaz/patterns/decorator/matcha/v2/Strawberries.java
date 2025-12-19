@@ -1,6 +1,6 @@
 package com.nayeel.imtiaz.patterns.decorator.matcha.v2;
 
-public class Strawberries extends CondimentDecorator {
+public final class Strawberries extends CondimentDecorator {
     Strawberries(Beverage beverage) {
         super(beverage);
     }

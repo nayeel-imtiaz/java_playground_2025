@@ -1,29 +1,28 @@
 package com.nayeel.imtiaz.patterns.decorator.matcha.v2.app;
 
-import com.nayeel.imtiaz.patterns.decorator.matcha.v2.BaseDrinks;
+import com.nayeel.imtiaz.patterns.decorator.matcha.v2.BaseDrink;
 import com.nayeel.imtiaz.patterns.decorator.matcha.v2.Beverage;
-import com.nayeel.imtiaz.patterns.decorator.matcha.v2.CondimentFactory;
-import com.nayeel.imtiaz.patterns.decorator.matcha.v2.Condiments;
+import com.nayeel.imtiaz.patterns.decorator.matcha.v2.Condiment;
 import com.nayeel.imtiaz.patterns.decorator.matcha.v2.MatchaFactory;
 
 public class MatchaShop {
     public static void main(String[] args) {
-        Beverage drink1 = MatchaFactory.addBase(BaseDrinks.CEREMONIALMATCHA);
+        Beverage drink1 = MatchaFactory.addBase(BaseDrink.CEREMONIAL_MATCHA);
 
-        Beverage drink2 = CondimentFactory.addCondiment(
-            Condiments.STRAWBERRIES,
-            CondimentFactory.addCondiment(
-                Condiments.MATCHACREAM,
-                CondimentFactory.addCondiment(
-                    Condiments.BOBAPEARLS,
-                    MatchaFactory.addBase(BaseDrinks.HOJICHAMATCHA)
+        Beverage drink2 = MatchaFactory.addCondiment(
+            Condiment.STRAWBERRIES,
+            MatchaFactory.addCondiment(
+                Condiment.MATCHA_CREAM,
+                MatchaFactory.addCondiment(
+                    Condiment.BOBA_PEARLS,
+                    MatchaFactory.addBase(BaseDrink.HOJICHA_MATCHA)
                 )
             )
         );
 
-        Beverage drink3 = CondimentFactory.addCondiment(
-                Condiments.PEACANS,
-                MatchaFactory.addBase(BaseDrinks.COCONUTMATCHA)
+        Beverage drink3 = MatchaFactory.addCondiment(
+                Condiment.PECANS,
+                MatchaFactory.addBase(BaseDrink.COCONUT_MATCHA)
         );
 
         System.out.printf("Drink 1: %s -> $%.2f", drink1.getDescription(), drink1.getCost());

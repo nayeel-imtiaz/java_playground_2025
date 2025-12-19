@@ -1,6 +1,6 @@
 package com.nayeel.imtiaz.patterns.decorator.matcha.v2;
 
-public class BobaPearls extends CondimentDecorator {
+public final class BobaPearls extends CondimentDecorator {
     BobaPearls(Beverage beverage) {
         super(beverage);
     }

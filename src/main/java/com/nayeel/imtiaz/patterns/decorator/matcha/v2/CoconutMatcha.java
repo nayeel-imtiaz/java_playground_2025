@@ -1,6 +1,6 @@
 package com.nayeel.imtiaz.patterns.decorator.matcha.v2;
 
-public class CoconutMatcha implements Beverage {
+public final class CoconutMatcha implements Beverage {
     CoconutMatcha() {}
 
     @Override
