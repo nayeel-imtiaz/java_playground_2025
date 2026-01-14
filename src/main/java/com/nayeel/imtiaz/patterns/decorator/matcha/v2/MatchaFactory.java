@@ -19,4 +19,12 @@ public class MatchaFactory {
             case STRAWBERRIES -> new Strawberries(beverage);
         };
     }
+
+    public static Beverage buildDrink(BaseDrink baseDrink, Condiment ...condiments) {
+        Beverage drink = addBase(baseDrink);
+        for (Condiment condiment : condiments) {
+            drink = addCondiment(condiment, drink);
+        }
+        return drink;
+    }
 }

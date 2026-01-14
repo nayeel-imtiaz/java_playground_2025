@@ -7,7 +7,7 @@ public final class Peacans extends CondimentDecorator {
 
     @Override
     public String getDescription() {
-        return beverage.getDescription() + ", peacans";
+        return beverage.getDescription() + ", pecans";
     }
 
     @Override
